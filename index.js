@@ -175,11 +175,11 @@ client.connect(err => {
           console.log(user)
           
           const filter = {email:user.adminEmail}
-      
+
           const updateDoc = {$set:{role:'admin'}}
           const result = await userCollection.updateOne(filter, updateDoc);
           console.log(result)
-        res.json(result);
+          res.json(result);
       })
       
       
